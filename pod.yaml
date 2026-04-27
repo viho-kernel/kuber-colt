@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: app-1
+  name: app1
   labels:
-    name: POD-1
+    name: POD1
     environment: dev
     app: nginx-hosting
 spec:
