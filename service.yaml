@@ -7,7 +7,7 @@ spec:
     name: POD1
     environment: dev
     app: nginx-hosting
-  type: ClusterIP
+  type: NodePort
   ports:
     - name: service1
       protocol: TCP
