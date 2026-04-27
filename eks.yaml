@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: spot-cluster
+  region: us-east-1
+
+managedNodeGroups:
+  - name: spot-nodes
+    instanceTypes: [ "t3.medium", "t3.large", "m5.large" ] # Diversify to avoid capacity issues
+    spot: true # Enables Spot capacity
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 5
