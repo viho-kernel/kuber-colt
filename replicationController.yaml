@@ -38,9 +38,9 @@ spec:
         ports:
         - containerPort: 80
       - name: rc-container-2
-        image: docker.io/bitnami/node:latest
+        image: nginxdemos/hello
         ports:
-        - containerPort: 3000
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -60,7 +60,7 @@ spec:
       targetPort: 80
     - name: app2
       protocol: TCP 
-      port: 8080
-      targetPort: 3000
+      port: 3000
+      targetPort: 80
   
 
