@@ -37,6 +37,10 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+      - name: rc-container-2
+        image: docker.io/bitnami/node:latest
+        ports:
+        - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -50,8 +54,13 @@ spec:
     status: ok
   type: LoadBalancer
   ports:
-    - name: service2
+    - name: app1
       protocol: TCP
       port: 80
       targetPort: 80
+    - name: app2
+      protocol: TCP 
+      port: 3000
+      targetPort: 3000
+  
 
