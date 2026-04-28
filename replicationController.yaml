@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: ReplicationControllerDemo #RC-NAME
+  name: replicationcontrollerdemo #RC-NAME
   labels:
     app: rc-1
     env: dev
@@ -14,7 +14,7 @@ spec:
       status: ok
   template:
     metadata:
-      name: RC-POD-1 #Pod-template
+      name: rc-pod-1 #Pod-template
       labels:
         app: rc-1 
     spec:
