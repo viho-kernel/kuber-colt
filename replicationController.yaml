@@ -16,7 +16,6 @@ spec:
     metadata:
       name: RC-POD-1 #Pod-template
       labels:
-        "true": "yes"
         app: rc-1 
   spec:
     containers:
