@@ -7,7 +7,7 @@ metadata:
     env: dev
     status: ok
 ---
-apiVersion: app/v1
+apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: amazondns
@@ -37,6 +37,7 @@ spec:
     spec:
       containers:
       - name: httpd 
+        image: httpd:latest
       ports:
       - containerPort: 8080
 ---
@@ -47,7 +48,7 @@ metadata:
   name: service2
 spec:
   selector:
-    app: rc-1
+    app: rs-1
     env: dev
     status: ok
   type: LoadBalancer
