@@ -18,7 +18,6 @@ metadata:
     status: ok
 spec:
   replicas: 2
-  namespace: amazondns
   #selector should match labels.
   selector:
       app: rc-1
