@@ -16,10 +16,11 @@ spec:
     metadata:
       name: RC-POD-1 #Pod-template
       labels:
-        true: yes 
+        true: yes
+        app: rc-1 
   spec:
     containers:
-    - name: container-1
+    - name: rc-container-1
       image: nginx:latest
       ports:
       - containerPort: 80
@@ -33,7 +34,7 @@ spec:
     app: rc-1
     env: dev
     status: ok
-  type: NodePort
+  type: LoadBalancer
   ports:
     - name: service2
       protocol: TCP
