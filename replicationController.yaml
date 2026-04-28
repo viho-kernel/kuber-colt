@@ -17,7 +17,7 @@ metadata:
     env: dev
     status: ok
 spec:
-  replicas: 2
+  replicas: 1
   #selector should match labels.
   selector:
       app: rc-1
