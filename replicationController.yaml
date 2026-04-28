@@ -8,6 +8,7 @@ metadata:
     status: ok
 spec:
   replicas: 2
+  #selector should match labels.
   selector:
       app: rc-1
       env: dev
@@ -16,7 +17,10 @@ spec:
     metadata:
       name: rc-pod-1 #Pod-template
       labels:
-        app: rc-1 
+        #these lables should match spec.selector
+        app: rc-1
+        env: dev
+        status: ok
     spec:
       containers:
       - name: rc-container-1
